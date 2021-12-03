@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
-===
+_s (Modified version)
+=====================
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
@@ -68,3 +68,9 @@ $ npm install
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+
+### Modified version
+
+My name is [Fábio](https://github.com/fabio-blanco) and this is a modified version from the original 
+[underscores](https://github.com/Automattic/_s) that I've made for my personal use. Feel free to
+use it too if it fits your needs.
