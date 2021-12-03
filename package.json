@@ -17,10 +17,10 @@
     "url": "https://github.com/fabio-blanco/_s/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^12.1.0",
+    "@wordpress/scripts": "^19.2.2",
     "dir-archiver": "^1.1.1",
-    "rtlcss": "^2.5.0",
-    "sass": "^1.35.1"
+    "rtlcss": "^3.5.0",
+    "sass": "^1.44.0"
   },
   "rtlcssConfig": {
     "options": {
