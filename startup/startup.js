@@ -47,6 +47,7 @@ function replaceThemeName(themeName) {
     //3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
     shell.sed('-i', /Theme Name: esqueleto/g, 'Theme Name: ' + themeName, 'sass/style.scss');
     shell.sed('-i', /Text Domain: esqueleto/g, 'Text Domain: ' + themeName, 'sass/style.scss');
+    shell.sed('-i', /this_theme is based/g, themeName + ' is based', 'sass/style.scss');
     shell.sed('-i', /Theme Name: esqueleto/g, 'Theme Name: ' + themeName, 'sass/woocommerce.scss');
 
     shell.ls('*.php', 'inc/*.php').forEach(function(file) {
