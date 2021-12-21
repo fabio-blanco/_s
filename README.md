@@ -19,11 +19,16 @@ Note: `.no-sidebar` styles are automatically loaded.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
 
-## Important notice
+## Important note
 
 **With the new full site editing feature that will be bundled with WordPress 5.9 release, you should probably
-use a Block Theme. Esqueleto is a regular theme desingned to be used by power users and developpers who do have the 
-need to create themes by directily working with php, javascript, sass, css, node scripts and other advanced tools.** 
+use a Block Theme (e.g. 
+[Gutenberg Starter Theme Blocks](https://github.com/WordPress/theme-experiments/tree/master/gutenberg-starter-theme-blocks), 
+[Varia](https://github.com/Automattic/themes/tree/trunk/varia) and others), you can also learn about [block themes
+development](https://developer.wordpress.org/block-editor/how-to-guides/themes/block-theme-overview/) 
+(take a look at [Theme Experiments](https://github.com/WordPress/theme-experiments)). Esqueleto is a regular theme designed 
+to be used by power users and developers who do have the need to create themes by directly working with php, javascript, 
+sass, css, node scripts and other advanced tools.** 
 
 Installation
 ---------------
