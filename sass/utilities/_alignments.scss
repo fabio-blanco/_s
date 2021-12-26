@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .alignleft {
 
 	/*rtl:ignore*/
@@ -21,7 +23,7 @@
 .aligncenter {
 	clear: both;
 
-	@include center-block;
+	@include mixins.center-block;
 
 	margin-bottom: 1.5em;
 }

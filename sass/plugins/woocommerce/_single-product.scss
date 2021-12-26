@@ -1,3 +1,6 @@
+@use "variables" as woo-vars;
+@use "../../abstracts/mixins";
+
 .single-product {
 
 	div.product {
@@ -53,7 +56,7 @@
 
 						li {
 
-							@include column-width($i);
+							@include mixins.column-width($i);
 
 							&:nth-child(#{$i}n) {
 								margin-right: 0;
@@ -77,10 +80,10 @@
 	}
 
 	&.in-stock {
-		color: $woocommerce__color-success;
+		color: woo-vars.$color-success;
 	}
 
 	&.out-of-stock {
-		color: $woocommerce__color-error;
+		color: woo-vars.$color-error;
 	}
 }

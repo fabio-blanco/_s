@@ -1,20 +1,20 @@
 /* Typography
 --------------------------------------------- */
-@import "typography/typography";
+@use "typography";
 
 /* Elements
 --------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+@use "elements/body";
+@use "elements/hr";
+@use "elements/lists";
+@use "elements/media";
+@use "elements/tables";
 
 /* Links
 --------------------------------------------- */
-@import "elements/links";
+@use "elements/links";
 
 /* Forms
 --------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
+@use "elements/buttons";
+@use "elements/fields";

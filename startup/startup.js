@@ -48,9 +48,14 @@ function replaceThemeName(themeName) {
     shell.sed('-i', /Theme Name: esqueleto/g, 'Theme Name: ' + themeName, 'sass/style.scss');
     shell.sed('-i', /Text Domain: esqueleto/g, 'Text Domain: ' + themeName, 'sass/style.scss');
     shell.sed('-i', /this_theme is based/g, themeName + ' is based', 'sass/style.scss');
+
+    shell.sed('-i', /Theme Name: esqueleto/g, 'Theme Name: ' + themeName, 'sass/_theme-header.scss');
+    shell.sed('-i', /Text Domain: esqueleto/g, 'Text Domain: ' + themeName, 'sass/_theme-header.scss');
+    shell.sed('-i', /this_theme is based/g, themeName + ' is based', 'sass/_theme-header.scss');
+
     shell.sed('-i', /Theme Name: esqueleto/g, 'Theme Name: ' + themeName, 'sass/woocommerce.scss');
 
-    shell.ls('*.php', 'inc/*.php').forEach(function(file) {
+    shell.ls('*.php', 'inc/*.php', 'template-parts/*.php').forEach(function(file) {
         //4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
         shell.sed('-i', / esqueleto/g, ' ' + themeName, file);
         //5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.

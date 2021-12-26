@@ -1,3 +1,5 @@
+@use "../../abstracts/variables";
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -18,9 +20,9 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	line-height: $font__line-height-pre;
+	background: variables.$color__background-pre;
+	font-family: variables.$font__pre;
+	line-height: variables.$font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -31,18 +33,18 @@ code,
 kbd,
 tt,
 var {
-	font-family: $font__code;
+	font-family: variables.$font__code;
 }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted variables.$color__border-abbr;
 	cursor: help;
 }
 
 mark,
 ins {
-	background: $color__background-ins;
+	background: variables.$color__background-ins;
 	text-decoration: none;
 }
 

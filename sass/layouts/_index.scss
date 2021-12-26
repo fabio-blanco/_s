@@ -1,0 +1,28 @@
+@use "no-sidebar";
+
+@use "../abstracts/variables/config";
+@use "../abstracts/mixins";
+
+@if config.$sidebar-direction != none {
+  .site {
+    display: grid;
+    @include mixins.page-layout(config.$sidebar-direction);
+  }
+
+  .site-header {
+    grid-area: header;
+  }
+
+  .site-main {
+    grid-area: main;
+    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  }
+
+  .widget-area {
+    grid-area: sidebar;
+  }
+
+  .site-footer {
+    grid-area: footer;
+  }
+}

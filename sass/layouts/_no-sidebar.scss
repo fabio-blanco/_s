@@ -1,11 +1,15 @@
-.no-sidebar {
+@use "../abstracts/variables/config";
 
-	.site {
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-areas:
+@if config.$sidebar-direction != none {
+	.no-sidebar {
+
+		.site {
+			display: grid;
+			grid-template-columns: auto;
+			grid-template-areas:
 			"header"
 			"main"
 			"footer";
+		}
 	}
 }

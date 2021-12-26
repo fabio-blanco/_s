@@ -1,0 +1,32 @@
+@use "sass:math";
+@use "../variables/columns";
+@use "../variables/structure/size";
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get(columns.$dimensions, $numberColumns) - math.div((columns.$margin * ($numberColumns - 1)), $numberColumns);
+}
+
+// Sidebar direction
+@mixin page-layout($direction) {
+	@if $direction == right {
+		grid-template-columns: auto (size.$site-sidebar);
+		grid-template-areas:
+		"header header"
+		"main sidebar"
+		"footer footer";
+	} @else if $direction == left {
+		grid-template-columns: (size.$site-sidebar) auto;
+		grid-template-areas:
+		"header header"
+		"sidebar main"
+		"footer footer";
+	}
+}

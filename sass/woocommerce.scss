@@ -4,23 +4,15 @@ Theme Name: esqueleto
 WooCommerce styles override
 */
 
-// WooCommerce color variables
-$woocommerce__color-error: #e2401c;
-$woocommerce__color-success: #0f834d;
-$woocommerce__color-info: #3d9cd2;
-
-// Import variables and mixins
-@import "abstracts/abstracts";
-
 /**
  * Shop tables
  */
-@import "plugins/woocommerce/tables";
+@use "plugins/woocommerce/tables";
 
 /**
  * Products
  */
-@import "plugins/woocommerce/products";
+@use "plugins/woocommerce/products";
 
 /**
  * Single product

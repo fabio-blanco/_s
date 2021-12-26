@@ -1,3 +1,6 @@
+@use "../../abstracts/variables";
+@use "variables" as woo-var;
+
 /**
  * Header cart
  */
@@ -55,7 +58,7 @@
 		top: 0;
 		position: absolute;
 		left: 0;
-		color: $color__link;
+		color: variables.$color__link;
 	}
 }
 
@@ -82,7 +85,7 @@ p.stars {
 			line-height: 1;
 			font-family: star;
 			content: "\53";
-			color: $color__text-main;
+			color: variables.$color__text-main;
 			text-indent: 0;
 			opacity: 0.25;
 		}
@@ -91,7 +94,7 @@ p.stars {
 
 			~ a::before {
 				content: "\53";
-				color: $color__text-main;
+				color: variables.$color__text-main;
 				opacity: 0.25;
 			}
 		}
@@ -103,7 +106,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: variables.$color__link;
 				opacity: 1;
 			}
 		}
@@ -115,13 +118,13 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: variables.$color__link;
 				opacity: 1;
 			}
 
 			~ a::before {
 				content: "\53";
-				color: $color__text-main;
+				color: variables.$color__text-main;
 				opacity: 0.25;
 			}
 		}
@@ -130,7 +133,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: variables.$color__link;
 				opacity: 1;
 			}
 		}
@@ -175,19 +178,19 @@ p.stars {
 	text-align: right;
 
 	&.strong {
-		color: $woocommerce__color-success;
+		color: woo-var.$color-success;
 	}
 
 	&.short {
-		color: $woocommerce__color-error;
+		color: woo-var.$color-error;
 	}
 
 	&.bad {
-		color: $woocommerce__color-error;
+		color: woo-var.$color-error;
 	}
 
 	&.good {
-		color: $woocommerce__color-info;
+		color: woo-var.$color-info;
 	}
 }
 
@@ -199,14 +202,14 @@ p.stars {
 	&.woocommerce-validated {
 
 		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-success;
+			box-shadow: inset 2px 0 0 woo-var.$color-success;
 		}
 	}
 
 	&.woocommerce-invalid {
 
 		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-error;
+			box-shadow: inset 2px 0 0 woo-var.$color-error;
 		}
 	}
 }
@@ -223,18 +226,18 @@ p.stars {
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: $woocommerce__color-success;
+	background-color: woo-var.$color-success;
 	clear: both;
 }
 
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: $woocommerce__color-info;
+	background-color: woo-var.$color-info;
 }
 
 .woocommerce-error {
-	background-color: $woocommerce__color-error;
+	background-color: woo-var.$color-error;
 }
 
 .demo_store {
@@ -244,7 +247,7 @@ p.no-comments {
 	right: 0;
 	margin: 0;
 	padding: 1em;
-	background-color: $woocommerce__color-info;
+	background-color: woo-var.$color-info;
 	z-index: 9999;
 }
 
