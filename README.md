@@ -46,7 +46,7 @@ versions)
 
 Clone the repository to a directory with your desired theme name (like, say, `encarnado`):
 ```shell
-$ git clone -b esqueleto --single-branch https://github.com/fabio-blanco/_s.git encarnado
+$ git clone --single-branch https://github.com/fabio-blanco/esqueleto.git encarnado
 ```
 
 **Note:** You probably want to do this from inside a local WordPress theme folder (e.g: `/path/to/wordpress/wp-content/themes`)
