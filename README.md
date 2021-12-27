@@ -1,7 +1,8 @@
 Esqueleto
 ========
 
-Hi. I'm a WordPress starter theme called `Esqueleto`. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a WordPress starter theme called `Esqueleto`. I'm a theme meant for hacking so don't use me as a Parent Theme. 
+Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're 
@@ -37,10 +38,32 @@ Installation
 
 `Esqueleto` requires the following dependencies:
 
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/) (It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to manage node and nvm 
+versions)
 - [Composer](https://getcomposer.org/)
 
 ### Quick Start
+
+Clone the repository to a directory with your desired theme name (like, say, `encarnado`):
+```shell
+$ git clone -b esqueleto --single-branch https://github.com/fabio-blanco/_s.git encarnado
+```
+
+**Note:** You probably want to do this from inside a local WordPress theme folder (e.g: `/path/to/wordpress/wp-content/themes`)
+
+Enter the new theme directory:
+
+```shell
+$ cd encarnado
+```
+
+To start using all the tools that come with `Esqueleto`  you need to install the necessary Node.js and Composer 
+dependencies :
+
+```sh
+$ composer install
+$ npm install
+```
 
 Just run the startup script from inside the theme project directory:
 
@@ -48,11 +71,20 @@ Just run the startup script from inside the theme project directory:
 $ npm run startup
 ```
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename 
+`esqueleto.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+
+Now just run the watch script and start working on your theme.
+
+```sh
+$ npm run watch
+```
 
 ### Manual Quick Start
 
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
+This manual quick start is meant for he who doesn't want to run the startup script.
+Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll 
+need to do a six-step find and replace on the name in all the templates.
 
 1. Search for `'esqueleto'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
 2. Search for `esqueleto_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
@@ -61,9 +93,10 @@ Clone or download this repository, change its name to something else (like, say,
 5. Search for `esqueleto-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
 6. Search for `ESQUELETO_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename 
+`esqueleto.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-### Setup
+#### Setup
 
 To start using all the tools that come with `Esqueleto`  you need to install the necessary Node.js and Composer dependencies :
 
