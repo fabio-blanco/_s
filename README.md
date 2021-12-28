@@ -38,7 +38,7 @@ Installation
 
 `Esqueleto` requires the following dependencies:
 
-- [Node.js](https://nodejs.org/) (It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to manage node and nvm 
+- [Node.js](https://nodejs.org/) (It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to manage node and npm 
 versions)
 - [Composer](https://getcomposer.org/)
 
