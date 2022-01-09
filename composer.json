@@ -6,12 +6,12 @@
         "WordPress",
         "Themes"
     ],
-    "homepage": "https://github.com/fabio-blanco/_s",
+    "homepage": "https://github.com/fabio-blanco/esqueleto",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Contributors",
-            "homepage": "https://github.com/fabio-blanco/_s/graphs/contributors"
+            "homepage": "https://github.com/fabio-blanco/esqueleto/graphs/contributors"
         }
     ],
     "require": {
@@ -29,7 +29,7 @@
         "make-pot": "wp i18n make-pot . languages/esqueleto.pot"
     },
     "support": {
-        "issues": "https://github.com/fabio-blanco/_s/issues",
-        "source": "https://github.com/fabio-blanco/_s"
+        "issues": "https://github.com/fabio-blanco/esqueleto/issues",
+        "source": "https://github.com/fabio-blanco/esqueleto"
     }
 }

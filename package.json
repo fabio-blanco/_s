@@ -8,13 +8,13 @@
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/fabio-blanco/_s#readme",
+  "homepage": "https://github.com/fabio-blanco/esqueleto#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabio-blanco/_s.git"
+    "url": "git+https://github.com/fabio-blanco/esqueleto.git"
   },
   "bugs": {
-    "url": "https://github.com/fabio-blanco/_s/issues"
+    "url": "https://github.com/fabio-blanco/esqueleto/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^19.2.2",
