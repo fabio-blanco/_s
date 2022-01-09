@@ -13,11 +13,15 @@ function validateThemeName(themeName) {
     }
 }
 
-function doStartUp(themeName, removeGitFolders) {
+function doStartUp(themeName, removeGitFolders, removePotFile) {
     let errorCode = replaceThemeName(themeName);
 
     if (!errorCode && removeGitFolders) {
         errorCode = doRemoveGitFolders();
+    }
+
+    if (!errorCode && removePotFile) {
+        errorCode = doRemovePotFile();
     }
 
     return errorCode;
@@ -61,6 +65,7 @@ function replaceThemeName(themeName) {
 
     shell.sed('-i', /"esqueleto"/g, '"' + themeName + '"', 'phpcs.xml.dist');
     shell.sed('-i', /esqueleto\.zip/g, themeName + '.zip', 'package.json');
+    shell.sed('-i', /esqueleto\.pot/g, themeName + '.pot', 'composer.json');
 
     shell.echo("The theme startup is ready!");
 }
@@ -68,6 +73,12 @@ function replaceThemeName(themeName) {
 
 function doRemoveGitFolders() {
     const {code} = shell.rm('-rf', ['.git', '.github', '.gitignore', '.gitattributes']);
+
+    return code;
+}
+
+function doRemovePotFile() {
+    const {code} = shell.rm('languages/esqueleto.pot');
 
     return code;
 }
@@ -91,10 +102,26 @@ function main() {
                 }
 
                 if (!errorCode) {
-                    errorCode = doStartUp(themeName, removeGitFolders);
+
+
+                    rl.question("Remove the esqueleto.pot file? (Y, n):", function (removePotAnswer) {
+                        let removePotFile = true;
+
+                        if(removePotAnswer && removePotAnswer.trim().toLowerCase() === 'n') {
+                            removePotFile = false;
+                        } else if(removePotAnswer && removePotAnswer.trim().toLowerCase() !== 'y') {
+
+                        }
+
+                        if (!errorCode) {
+                            errorCode = doStartUp(themeName, removeGitFolders, removePotFile);
+                        }
+
+                        rl.close();
+                    });
+
                 }
 
-                rl.close();
 
             });
 

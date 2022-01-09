@@ -71,8 +71,17 @@ Just run the startup script from inside the theme project directory:
 $ npm run startup
 ```
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename 
-`esqueleto.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+In order to generate the updated pot translation template, compile the css and generate the pot file:
+
+```sh
+$ npm run compile:css
+$ composer make-pot
+```
+
+If necessary, you can adjust the css header by changing the sass file `_theme-header.scss` and recompiling the css
+(See the Available CLI commands section below).
+
+Then, update the links in `footer.php` with your own information. Next, update or delete this readme.
 
 Now just run the watch script and start working on your theme.
 
