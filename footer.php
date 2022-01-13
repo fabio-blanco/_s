@@ -21,8 +21,14 @@
 			</a>
 			<span class="sep"> | </span>
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'esqueleto' ), 'esqueleto', '<a href="https://github.com/fabio-blanco">F&aacute;bio Blanco</a>' );
+				printf(
+					/* translators: 1: Theme name, 2: Theme author, 3: Original theme, 4: Original theme author. */
+					esc_html__( 'Theme: %1$s by %2$s based on %3$s by %4$s.', 'esqueleto' ),
+					'esqueleto',
+					'<a href="https://github.com/fabio-blanco">F&aacute;bio Blanco</a>',
+					'_s (Underscores)',
+					'<a href="https://automattic.com/">Automattic</a>'
+				);
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
